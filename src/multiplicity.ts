@@ -134,6 +134,8 @@ export class MultiplicityFactory {
    * string is of the form `a..b`, where `a` is a number, and `b` is either a
    * number or `*`, which is replaced with `Infinity`.
    * @param token The token to parse.
+   * @throws If the token is not a single multiplicity and is a malformed
+   * interval multiplicity.
    * @returns The parsed multiplicity.
    */
   public parseMultiplicity(token: string | number): Multiplicity {
