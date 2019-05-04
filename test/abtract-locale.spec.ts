@@ -1,8 +1,8 @@
 import { assert } from "chai";
 import { sprintf } from "sprintf-js";
 
-import { AbstractLocale, LocaleCode } from "../src";
-import { LocaleValues } from "../src/abstract-locale";
+import { AbstractLocale, LocaleValues } from "../src/abstract-locale";
+import { LocaleCode } from "../src/locale-code";
 
 const unlocalized = "Some untranslated phrase.";
 
