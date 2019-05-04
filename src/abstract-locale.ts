@@ -95,15 +95,18 @@ export abstract class AbstractLocale {
 
   /**
    * Localizes a UTC moment with a given format. See the following for more
-   * details on the format: https://momentjs.com/docs/#/displaying/format/.
+   * details on the token format: https://momentjs.com/docs/#/parsing/string/.
+   * See the following for more details on the localized format:
+   * https://momentjs.com/docs/#/displaying/format/.
    * @param token The UTC moment token to localize.
    * @param format The format to display the localized moment in.
    * @returns The localized moment formatted as specified.
    */
   public __m(token: string, format: string = "LL"): string {
-    const m = moment.utc(token);
-    m.locale(this.getLocaleCode().toString());
-    return m.format(format);
+    return moment
+      .utc(token)
+      .locale(this.getLocaleCode().toString())
+      .format(format);
   }
 
   /**

@@ -1,7 +1,7 @@
 {
   "name": "i18n",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A simple object-oriented localization utility.",
   "license": "MIT",
   "author": "Marc-Antoine Ouimet <ouimetmarcantoine@gmail.com>",

@@ -12,6 +12,44 @@ A simple object-oriented localization utility.
 
 ---
 
+## Installation
+
+Using npm:
+
+```sh
+npm install https://github.com/NDCB/i18n/releases/download/v1.0.0/i18n-v1.0.0.tgz
+```
+
+## Usage
+
+This utility provides classes to represent standard language, country and locale codes.
+These are used to define locale.
+The actual phrases used in the localization need to be specified as locale values.
+As such, a subclass of `AbstractLocale` needs to be implemented to provide these values.
+
+The values of a locale correspond to an object as follows.
+The keys of the object correspond to the source phrases, and the values either correspond to the localized phrase, or a mapping of localized phrases mapped by multiplicities.
+These multiplicities are either single values, or intervals formatted as `a..b` for `[a, b]`, where `b` may be `*` for intervals `[a, Infinity)`.
+
+```ts
+interface LocaleValues {
+  [phrase: string]: string | { [multiplicity: string]: string };
+}
+```
+
+Then, using an instance `locale` of such a class, with french localized values from english:
+
+```js
+// Localize simple phrases
+locale.__("Hello World!") //=> "Bonjour l'univers!"
+// Localize phrases with parameters
+locale.__("Hi %1$s!", "Marc-Antoine") //=> "Salut Marc-Antoine!"
+// Localize phrases with a quantifier
+locale.__n("Articles published: %1$d", quantity) //=> "Articles publiés: 10"
+// Localize a moment
+locale.__m("2019-05-04") //=> "4 mai 2019"
+```
+
 ## About
 
 ### Building the documentation
