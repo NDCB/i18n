@@ -4,4 +4,4 @@ export { LanguageCode } from "./language-code";
 
 export { LocaleCode } from "./locale-code";
 
-export { AbstractLocale } from "./abstract-locale";
+export { AbstractLocale, LocaleValues } from "./abstract-locale";

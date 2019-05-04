@@ -17,7 +17,7 @@ A simple object-oriented localization utility.
 Using npm:
 
 ```sh
-npm install https://github.com/NDCB/i18n/releases/download/v1.0.0/i18n-v1.0.0.tgz
+npm install https://github.com/NDCB/i18n/releases/download/v1.0.1/i18n-v1.0.1.tgz
 ```
 
 ## Usage
